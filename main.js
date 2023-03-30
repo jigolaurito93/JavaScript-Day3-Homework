@@ -1,5 +1,6 @@
 console.log('This is the homework');
 
+console.log('=====================================')
 
 // Exercise 1 - Closures
 // Update the createAdder function below so that
@@ -13,20 +14,27 @@ console.log('This is the homework');
 //     }
 // }
 
-// const addEight = createAdder(8);
-// console.log(addEight(10)); // 18
-// console.log(addEight(17)); // 25
-// console.log(addEight(50)); // 58
-// console.log(addEight(100)); // 108
-// console.log(addEight(92)); // 100
+const createAdder = x => y => x+y
 
-// const addThree = createAdder(3);
-// console.log(addThree(10)); // 13
-// console.log(addThree(17)); // 20
-// console.log(addThree(50)); // 53
-// console.log(addThree(100)); // 103
-// console.log(addThree(92)); // 95
+const addEight = createAdder(8);
 
+console.log(addEight(10)); // 18
+console.log(addEight(17)); // 25
+console.log(addEight(50)); // 58
+console.log(addEight(100)); // 108
+console.log(addEight(92)); // 100
+
+console.log('=====================================')
+
+const addThree = createAdder(3);
+
+console.log(addThree(10)); // 13
+console.log(addThree(17)); // 20
+console.log(addThree(50)); // 53
+console.log(addThree(100)); // 103
+console.log(addThree(92)); // 95
+
+console.log('=====================================')
 
 // Exercise 2 - Promises 
 // Using the below getMovieInfo function, which is a Promised-base function, write an asynchronous function (.then().catch() or async/await)
@@ -69,3 +77,4 @@ async function printMovieInfo(movieName) {
         console.warn(err)
     }
 };
+
